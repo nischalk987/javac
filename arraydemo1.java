@@ -1,18 +1,16 @@
-import java.util.*;
-
-public class arraydemo1 {
+public class ArrayDemo1 {
     public static void main(String[] args) {
-        int numbers[] = new int[5];
-        Scanner sc = new Scanner(System.in);
-
-        for(int i = 0 ; i < numbers.length ; i++) {
-            System.out.println("Enter array element " + (i + 1) + ":");
-            numbers[i] = sc.nextInt();
+        int[] array = new int[args.length];
+        
+        // Populate array with input arguments
+        for (int i = 0; i < args.length; i++) {
+            array[i] = Integer.parseInt(args[i]);
         }
 
-        System.out.println("The array elements are : ");
-        for(int i = 0 ; i < numbers.length ; i++) {
-            System.out.println(numbers[i]);
+        // Print the array values
+        System.out.println("Array elements:");
+        for (int num : array) {
+            System.out.println(num);
         }
     }
 }
